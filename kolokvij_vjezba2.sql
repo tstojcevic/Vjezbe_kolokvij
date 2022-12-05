@@ -116,3 +116,8 @@ insert into brat (ogrlica,asocijalno,neprijatelj)
 values (1,1,1), (2,1,2), (3,1,3);
 
 delete from brat where ogrlica !=14;
+
+#4 zadatak
+
+select suknja from cura where drugiputa is null;
+
