@@ -132,3 +132,10 @@ inner join decko_zarucnica e on d.decko=e.sifra
 inner join zarucnica f on e.zarucnica=f.sifra
 where c.drugiputa is not null and d.vesta like ('%ba%')
 order by 3 desc; 
+
+#6 zadatak
+
+select a.vesta, a.asocijalno
+from decko a
+left join decko_zarucnica b on b.decko=a.sifra
+where a.sifra != b.decko;
