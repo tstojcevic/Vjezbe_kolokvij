@@ -121,3 +121,14 @@ delete from brat where ogrlica !=14;
 
 select suknja from cura where drugiputa is null;
 
+#5 zadatak
+
+select f.novcica, a.neprijatelj, b.haljina
+from brat a
+inner join neprijatelj b on a.neprijatelj=b.sifra
+inner join cura c on b.cura=c.sifra
+inner join decko d on c.decko=d.sifra
+inner join decko_zarucnica e on d.decko=e.sifra
+inner join zarucnica f on e.zarucnica=f.sifra
+where c.drugiputa is not null and d.vesta like ('%ba%')
+order by 3 desc; 
