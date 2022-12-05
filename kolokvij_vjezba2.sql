@@ -99,3 +99,13 @@ values ('plava',85,1), ('crna',93,2),('plava',90,1);
 
 insert into decko_zarucnica (decko,zarucnica)
 values (1,1), (1,2), (2,2);
+
+#2 zadatak
+
+insert into svekar (ogrlica,asocijalno)
+values (1,1), (2,1), (3,1);
+
+insert into prijatelj (treciputa,ekstroventno,svekar)
+values (2022-01-01,1,1), (2022-02-02,1,2), (2022-03-03,1,3);
+
+update prijatelj set treciputa ='2020-04-30' where sifra is not null;
