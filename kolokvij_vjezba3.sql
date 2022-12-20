@@ -74,4 +74,29 @@ create table punica (
 );
 
 
+insert into svekar (novcica,suknja,narukvica,cura)
+values (250.39,'crvena',2,1), (150.39,'zelena',5,2), (350.39,'plava',3,3);
+
+insert into cura (ogrlica)
+values (2), (5), (3);
+
+insert into snasa (kuna,eura,ostavljena)
+values (250.50,30.50,1), (150.50,19.50,2), (350.50,48.50,3);
+
+insert into ostavljena(modelnaocala)
+values ('Gucci'),('Police'), ('Vogue');
+
+insert into prijatelj (indiferentno)
+values (1), (0), (1);
+
+insert into prijatelj_brat (prijatelj,brat)
+values (1,1), (1,2), (2,2);
+
+insert into brat (ogrlica,ekstroventno)
+values (1,1), (2,2), (3,1);
+
+insert into punica (kuna,vesta)
+values (255.50, 'crvena'), (155.50, 'bijela'), (355.50, 'plava');
+
+
 
