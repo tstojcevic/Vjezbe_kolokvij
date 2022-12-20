@@ -99,4 +99,12 @@ insert into punica (kuna,vesta)
 values (255.50, 'crvena'), (155.50, 'bijela'), (355.50, 'plava');
 
 
+alter table svekar add foreign key (cura) references cura (sifra);
+alter table snasa add foreign key (ostavljena) references ostavljena(sifra);
+alter table punica add foreign key (snasa) references snasa(sifra);
+alter table ostavljena add foreign key(prijatelj) references prijatelj(sifra);
+alter table prijatelj_brat add foreign key (prijatelj) references prijatelj(sifra);
+alter table prijatelj_brat add foreign key (brat) references brat(sifra);
+
+
 
