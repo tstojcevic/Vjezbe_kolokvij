@@ -107,4 +107,33 @@ alter table prijatelj_brat add foreign key (prijatelj) references prijatelj(sifr
 alter table prijatelj_brat add foreign key (brat) references brat(sifra);
 
 
+update svekar set suknja = 'Osijek';
+
+delete from punica where kratkamajica = 'AB';
+
+select majica
+from ostavljena
+where lipa !=9
+and lipa !=10
+and lipa !=20
+and lipa !=30
+and lipa !=35;
+
+select a.ekstroventno, f.vesta, e.kuna
+from brat a
+inner join prijatelj_brat b on b.brat=a.sifra
+inner join prijatelj c on b.prijatelj=c.sifra
+inner join ostavljena d on c.sifra=d.prijatelj
+inner join snasa e on e.ostavljena=d.sifra
+inner join punica f on f.snasa=e.sifra
+where d.lipa !=91 and c.haljina like '%ba%'
+order by e.kuna desc;
+
+select a.haljina, a.lipa
+from prijatelj a
+left join prijatelj_brat b on a.sifra=b.brat
+where b.sifra is null;
+
+
+
 
